@@ -1,6 +1,4 @@
-from appium.webdriver.common.touch_action import TouchAction
-
-from screens.base import Screen
+from py_code.screens import Screen
 from selenium.webdriver.common.by import By
 
 

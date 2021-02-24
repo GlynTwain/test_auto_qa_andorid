@@ -1,5 +1,4 @@
-from appium import webdriver
-from features.application import Application
+from py_code.features import Application
 
 
 """behave -f allure_behave.formatter:AllureFormatter -o reports/ features"""

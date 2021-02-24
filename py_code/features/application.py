@@ -1,5 +1,5 @@
-from screens.main_screen import MainScreen
-from screens.next_screen import Next_screen
+from py_code.screens import MainScreen
+from py_code.screens import Next_screen
 
 class Application:
 

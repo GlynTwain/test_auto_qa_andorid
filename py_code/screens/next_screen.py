@@ -1,4 +1,4 @@
-from screens.base import Screen
+from py_code.screens import Screen
 from selenium.webdriver.common.by import By
 
 class Next_screen(Screen):

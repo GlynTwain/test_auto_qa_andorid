@@ -1,13 +1,16 @@
 # Created by shity at 24.02.2021
-Feature: # Тест работы главной функции приложения - ОсЕщения воды
+Feature: # Работа главной функции приложения - ОсвЕщения воды
   # Enter feature description here
 
   Scenario: # Необходимо проследовать через меню к освЕщению воды
-    Given Tap next
-    Given Tap next1
-    Given Tap next2
+    Given Нажимаю Далее
+    Given Нажимаю Далее
+    Given Нажимаю Далее
+    Given Нажимаю Начать
+    When Озарит воду впышка свещенного света
+    #Given На экране предупреждения нажимаю Начать
+    Then Выспышка света освящает воду, теперь {context.result}
+    Given Закрываем, Вода освещена
 
-  Scenario: # Работа анимации карусели обучения
-    Given Tap next
-    Given Tap next1
-    Given Tap next2
+
+    """com.xaxtix.team.waterillunimation:id/exo_subtitles"""

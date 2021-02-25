@@ -1,4 +1,4 @@
-from py_code.features import Application
+from py_code.features.application import Application
 
 
 """behave -f allure_behave.formatter:AllureFormatter -o reports/ features"""

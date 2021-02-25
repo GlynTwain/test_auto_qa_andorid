@@ -1,4 +1,4 @@
-from py_code.screens import Screen
+from py_code.screens.base import Screen
 from selenium.webdriver.common.by import By
 
 

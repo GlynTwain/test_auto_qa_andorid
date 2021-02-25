@@ -15,15 +15,14 @@ class Screen:
         e = self.find_element(*locator)
         e.click()
 
-    def get_info(self, *locator, attr: str):
+    def get_info(self, *locator, attr: str)->str:
         pole = self.find_element(*locator).get_attribute(attr)
-        return pole
+        return str(pole)
 
-    def wait(self):
-        self.driver.implicitly_wait(15)
+    def wait(self, time: int = 15):
+        self.driver.implicitly_wait(time)
 
-    def swipe(self):
+    def swipe(self, x1: int, y1: int, x2: int, y2: int):
         touch = TouchAction(self.driver)
-        touch.press(x=977, y=803).move_to(x=136, y=800).release().perform()
+        touch.press(x=x1, y=y1).move_to(x=x2, y=y2).release().perform()
         time.sleep(1)
-

@@ -1,13 +1,14 @@
 from behave import given, when, then, step
 
 
+@then('открывается экран с текстом, нажимаем далее')
+@given('появляется надпись с пердупреждением и нажимаем начать')
 @given('Нажимаю Далее')
-@given('Нажимаю Начать')
 def tap_next(context):
     context.app.main_screen.tap_next()
 
 
-@given('Начинаем Освещение')
+@then('нажимаем Осветить')
 def tap_next(context):
     context.app.main_screen.tap_go()
 
@@ -18,11 +19,11 @@ def anim_flash(context, result):
     print(result)
 
 
-@when("Да Озарит воду, впышка свещенного света")
-def wait_animations(context):
-    context.app.main_screen.wait()
+@when("Вспышка освещает воду, ждём {wait_time} секунд")
+def wait_animations(context,wait_time):
+    context.app.main_screen.wait(time=wait_time)
 
 
-@given('Закрываем, Вода освещена')
+@then('Закрываем, Вода освещена')
 def tap_close(context):
     context.app.main_screen.tap_close()
